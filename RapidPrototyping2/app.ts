@@ -16,13 +16,13 @@
 
                 this.game.load.image("backgroundGamePLay", "/Content/Images/gamePlayBackground.png");
                 //Spritesheets
-                this.game.load.atlasXML("HERO_WALKING", "Graphics/Hero_Walking.png", "Graphics/Hero_Walking.xml");
+                this.game.load.atlasXML("HERO_WALKING", "/Content/Images/Hero_Walking.png", "/Content/Images/Hero_Walking.xml");
             }
 
              create() {
                  this.game.state.add("TitleScreen", State.TitleScreeen, true);
                  this.game.state.add("GamePLayState", State.GamePLayState, false);
-                this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+                 this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
             
             }
         }
