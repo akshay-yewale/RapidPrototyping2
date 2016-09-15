@@ -13,6 +13,10 @@ var State;
         TitleScreeen.prototype.create = function () {
             this.titleScreenImage = this.add.sprite(0, 0, "titleScreen");
             this.titleScreenImage.scale.setTo(this.game.width / this.titleScreenImage.width, this.game.height / this.titleScreenImage.height);
+            this.input.onTap.addOnce(this.ClickedOnScreen, this);
+        };
+        TitleScreeen.prototype.ClickedOnScreen = function () {
+            this.game.state.start("GamePLayState");
         };
         return TitleScreeen;
     }(Phaser.State));
