@@ -13,10 +13,10 @@
         }
             preload() {
                 this.game.load.image("titleScreen", "/Content/Images/titleScreen.png");
-
                 this.game.load.image("backgroundGamePLay", "/Content/Images/gamePlayBackground.png");
-                //Spritesheets
-                this.game.load.atlasXML("HERO_WALKING", "Graphics/Hero_Walking.png", "Graphics/Hero_Walking.xml");
+                this.game.load.image("playerObject", "/Content/Images/PlayerObject.png");
+                 //Spritesheets
+                this.game.load.atlasXML("HERO_WALKING", "/Content/Images/Hero_Walking.png", "/Content/Images/Hero_Walking.xml");
             }
 
              create() {

@@ -24,6 +24,8 @@
   <ItemGroup>
     <Content Include="app.css" />
     <Content Include="Content\Images\gamePlayBackground.png" />
+    <Content Include="Content\Images\Hero_Walking.png" />
+    <Content Include="Content\Images\Hero_Walking.xml" />
     <Content Include="Content\Images\PlayerObject.png" />
     <Content Include="Content\Images\titleScreen.png" />
     <Content Include="index.html" />
