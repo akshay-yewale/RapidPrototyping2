@@ -6,22 +6,24 @@
         constructor() {
             this.game = new Phaser.Game(1820, 920, Phaser.AUTO, 'content',
                 {
-                    create: create,
-                    preload: preload,
+                    create: this.create,
+                    preload: this.preload
                 });
 
-
-            function preload() {
-
-
+        }
+            preload() {
+                this.game.load.image("titleScreen","/Content/Images/titleScreen.png");
             }
 
-            function create() {
+             create() {
+                this.game.state.add("TitleScreen", State.TitleScreeen, true);
+                this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+            
             }
         }
-    }
 
-    window.onload = () => {
-        var game = new Game.RapidPrototyping2();
-    };
-}
+ }   
+
+window.onload = () => {
+    var game = new Game.RapidPrototyping2();
+};
