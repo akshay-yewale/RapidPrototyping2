@@ -3,19 +3,24 @@ var Game;
     var RapidPrototyping2 = (function () {
         function RapidPrototyping2() {
             this.game = new Phaser.Game(1820, 920, Phaser.AUTO, 'content', {
-                create: create,
-                preload: preload,
+                create: this.create,
+                preload: this.preload
             });
-            function preload() {
-            }
-            function create() {
-            }
         }
+        RapidPrototyping2.prototype.preload = function () {
+            this.game.load.image("titleScreen", "/Content/Images/titleScreen.png");
+            this.game.load.image("backgroundGamePLay", "/Content/Images/gamePlayBackground.png");
+        };
+        RapidPrototyping2.prototype.create = function () {
+            this.game.state.add("TitleScreen", State.TitleScreeen, true);
+            this.game.state.add("GamePLayState", State.GamePLayState, false);
+            this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+        };
         return RapidPrototyping2;
     }());
     Game.RapidPrototyping2 = RapidPrototyping2;
-    window.onload = function () {
-        var game = new Game.RapidPrototyping2();
-    };
 })(Game || (Game = {}));
+window.onload = function () {
+    var game = new Game.RapidPrototyping2();
+};
 //# sourceMappingURL=app.js.map

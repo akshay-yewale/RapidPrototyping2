@@ -23,17 +23,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.css" />
+    <Content Include="Content\Images\gamePlayBackground.png" />
+    <Content Include="Content\Images\PlayerObject.png" />
+    <Content Include="Content\Images\titleScreen.png" />
     <Content Include="index.html" />
     <Content Include="phaser.js" />
-    <Content Include="phaser.min.js" />
     <Content Include="pixi.min.js" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="GameObjects\Player.ts" />
     <TypeScriptCompile Include="p2.d.ts" />
     <TypeScriptCompile Include="phaser.d.ts" />
     <TypeScriptCompile Include="pixi.d.ts" />
+    <TypeScriptCompile Include="States\GamePlayState.ts" />
+    <TypeScriptCompile Include="States\TitleScreen.ts" />
   </ItemGroup>
   <ItemGroup>
     <None Include="web.Debug.config">
@@ -45,10 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Font\" />
-    <Folder Include="Content\Images\" />
     <Folder Include="Content\Sound\" />
-    <Folder Include="GameObjects\" />
-    <Folder Include="States\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
