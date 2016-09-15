@@ -22,7 +22,7 @@
              create() {
                  this.game.state.add("TitleScreen", State.TitleScreeen, true);
                  this.game.state.add("GamePLayState", State.GamePLayState, false);
-                this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+                 this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
             
             }
         }
