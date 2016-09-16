@@ -35,27 +35,23 @@ var GameObject;
             }
         };
         Player.prototype.MoveRight = function () {
-            //add function to move right
             this.x += 8;
             if (this.x + this.width > this.game.width)
                 this.x = this.game.width - this.width;
         };
         Player.prototype.MoveLeft = function () {
-            //add function to move left
             this.x -= 8;
             if (this.x < 0)
                 this.x = 0;
         };
         Player.prototype.QuitGame = function () {
-            // code to exit the game
         };
         Player.prototype.StartPoint = function () {
-            //define Starting point of game
             this.game.physics.startSystem(Phaser.Physics.ARCADE);
             this.game.physics.enable(this, Phaser.Physics.ARCADE);
+            this.game.physics.arcade.enableBody(true);
             this.playerState = PlayerState.PLAY;
             this.speed = 5;
-            // player = this.game.add.sprite(this.game.width / 2, this.game.height - 50,"playerObject");
             this.loadTexture("playerObject");
             this.animations.add("PLAY");
             this.animations.play("PLAY", 0, true);
@@ -64,4 +60,3 @@ var GameObject;
     }(Phaser.Sprite));
     GameObject.Player = Player;
 })(GameObject || (GameObject = {}));
-//# sourceMappingURL=Player.js.map

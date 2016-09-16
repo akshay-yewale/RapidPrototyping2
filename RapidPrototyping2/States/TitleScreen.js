@@ -22,4 +22,3 @@ var State;
     }(Phaser.State));
     State.TitleScreeen = TitleScreeen;
 })(State || (State = {}));
-//# sourceMappingURL=TitleScreen.js.map

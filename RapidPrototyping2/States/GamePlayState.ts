@@ -12,22 +12,23 @@
 
 
         create() {
-          
+            this.game.physics.startSystem(Phaser.Physics.ARCADE);
+            this.game.physics.enable(this, Phaser.Physics.ARCADE);
             this.backgroundGamePLay = this.add.sprite(0, 0, "backgroundGamePLay");
             this.backgroundGamePLay.scale.setTo(this.game.width / this.backgroundGamePLay.width, this.game.height / this.backgroundGamePLay.height);
            
             this.player = new GameObject.Player(this.game, 0, this.game.height - 50);
             this.game.add.existing(this.player);
-            this.backgroundGamePLay = this.add.sprite(0, 0, "backgroundGamePLay");
-            this.backgroundGamePLay.scale.setTo(this.game.width / this.backgroundGamePLay.width, this.game.height / this.backgroundGamePLay.height);
-            this.newPerson();
+
+            this.person = new GameObject.Person(this.game, 0, (this.game.height /2));
             this.game.add.existing(this.person);
+
         }
 
-        newPerson()
+        update()
         {
-            //Later for random spawning
-            this.person = new GameObject.Person(this.game, 0, this.game.height / 2);
+            if(this.game.physics.arcade.overlap(this.player, this.person))
+                super.update();
         }
     }
 }

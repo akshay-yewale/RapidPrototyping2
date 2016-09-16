@@ -28,7 +28,7 @@
                 //Put in death state here
                 this.DeadPhysics();
             }
-
+            this.game.physics.arcade.overlap(this, GameObject.Player);
             super.update();
         }
 

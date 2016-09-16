@@ -5,7 +5,6 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var GameObject;
 (function (GameObject) {
-    //Person status
     (function (PersonState) {
         PersonState[PersonState["STARTING"] = 0] = "STARTING";
         PersonState[PersonState["INAIR"] = 1] = "INAIR";
@@ -14,21 +13,19 @@ var GameObject;
     var PersonState = GameObject.PersonState;
     var Person = (function (_super) {
         __extends(Person, _super);
-        //Constructon gets game and coords
         function Person(game, x, y) {
             _super.call(this, game, x, y, "HERO_WALKING", 0);
             this.game = game;
             this.fallingSpeed = 0;
-            //Starts walking animation
             this.anchor.set(0.0, 1.0);
             this.StartAnimation();
             this.StartPhysics();
         }
         Person.prototype.update = function () {
             if (this.position.y > this.game.height - 1) {
-                //Put in death state here
                 this.DeadPhysics();
             }
+            this.game.physics.arcade.overlap(this, GameObject.Player);
             _super.prototype.update.call(this);
         };
         Person.prototype.StartAnimation = function () {
@@ -41,13 +38,9 @@ var GameObject;
         };
         Person.prototype.StartPhysics = function () {
             this.game.physics.enable(this, Phaser.Physics.ARCADE);
-            //  This gets it moving
             this.body.velocity.setTo(90, 240);
-            //  This makes the game world bounce-able
             this.body.collideWorldBounds = true;
             this.body.checkCollision.down = false;
-            //  This sets the image bounce energy for the horizontal  and vertical vectors (as an x,y point). "1" is 100% energy return
-            //this.body.bounce.set(1.01);
             this.body.gravity.set(0, 180);
         };
         Person.prototype.DeadPhysics = function () {
@@ -55,10 +48,8 @@ var GameObject;
             this.body.velocity.setTo(0, 0);
             this.game.physics.enable(false);
         };
-        //Make sure person doesnt bounce to much
         Person.MAX_SPEED = 100;
         return Person;
     }(Phaser.Sprite));
     GameObject.Person = Person;
 })(GameObject || (GameObject = {}));
-//# sourceMappingURL=Person.js.map

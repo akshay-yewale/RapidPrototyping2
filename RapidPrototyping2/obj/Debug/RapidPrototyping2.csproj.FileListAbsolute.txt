@@ -9,9 +9,8 @@ C:\Users\u1089828\Documents\Visual Studio 2015\Projects\RapidPrototyping2\RapidP
 C:\Users\u1089828\Documents\Visual Studio 2015\Projects\RapidPrototyping2\RapidPrototyping2\RapidPrototyping2\obj\Debug\RapidPrototyping2.csprojResolveAssemblyReference.cache
 C:\Users\u1089828\Documents\Visual Studio 2015\Projects\RapidPrototyping2\RapidPrototyping2\RapidPrototyping2\obj\Debug\RapidPrototyping2.dll
 C:\Users\u1089828\Documents\Visual Studio 2015\Projects\RapidPrototyping2\RapidPrototyping2\RapidPrototyping2\obj\Debug\RapidPrototyping2.pdb
-C:\Users\u1087208\Documents\Rapid prototype\RapidPrototyping2\RapidPrototyping2\obj\Debug\RapidPrototyping2.csprojResolveAssemblyReference.cache
-C:\Users\u1087208\Documents\Rapid prototype\RapidPrototyping2\RapidPrototyping2\obj\Debug\RapidPrototyping2.dll
-C:\Users\u1087208\Documents\Rapid prototype\RapidPrototyping2\RapidPrototyping2\obj\Debug\RapidPrototyping2.pdb
 C:\Users\u1087208\Documents\Rapid prototype\RapidPrototyping2\RapidPrototyping2\bin\RapidPrototyping2.dll.config
 C:\Users\u1087208\Documents\Rapid prototype\RapidPrototyping2\RapidPrototyping2\bin\RapidPrototyping2.dll
 C:\Users\u1087208\Documents\Rapid prototype\RapidPrototyping2\RapidPrototyping2\bin\RapidPrototyping2.pdb
+C:\Users\u1087208\Documents\Rapid prototype\RapidPrototyping2\RapidPrototyping2\obj\Debug\RapidPrototyping2.dll
+C:\Users\u1087208\Documents\Rapid prototype\RapidPrototyping2\RapidPrototyping2\obj\Debug\RapidPrototyping2.pdb

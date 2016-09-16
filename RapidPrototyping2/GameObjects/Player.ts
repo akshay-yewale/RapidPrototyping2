@@ -61,6 +61,7 @@
             //define Starting point of game
             this.game.physics.startSystem(Phaser.Physics.ARCADE);
             this.game.physics.enable(this, Phaser.Physics.ARCADE);
+            this.game.physics.arcade.enableBody(true);
           
             this.playerState = PlayerState.PLAY;
             this.speed = 5;
