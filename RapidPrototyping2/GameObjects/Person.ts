@@ -18,8 +18,6 @@
             this.anchor.set(0.0, 1.0);
             this.StartAnimation();
             this.StartPhysics();
-
-
         }
 
         update() {
@@ -52,6 +50,7 @@
             //  This sets the image bounce energy for the horizontal  and vertical vectors (as an x,y point). "1" is 100% energy return
             //this.body.bounce.set(1.01);
             this.body.gravity.set(0, 180);
+            
         }
 
         DeadPhysics()
